@@ -1,0 +1,16 @@
+git config --list // ves detalle git
+node corre sobre el v8 de google, traduce el js a lenguaje de maquina eficientemente.
+
+USOS NODE
+*   sockets para comunicacion cliente servidor(como ej facebook, cuando me taguean 
+diciendo esta publicacion te podria interesar, y a nosotros en tiempo real nos llega la notificacion.)
+*   cargas simultaneas, si tengo que subir 10 archivos, yo al subir el 1ro puedo empezar a trabajar 
+sin esperar los otros 9.
+*   conexiones a db
+*   creacion de servicios rest en segundos.
+
+BENEFICIOS NODE
+*   i/o sin bloqueos de servidor.
+*   Hay muchas librerias.
+
+NON BLOQUING I/O --> busca ejecutar en paralelo ahorrando tiempos
