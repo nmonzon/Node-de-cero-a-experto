@@ -14,3 +14,16 @@ BENEFICIOS NODE
 *   Hay muchas librerias.
 
 NON BLOQUING I/O --> busca ejecutar en paralelo ahorrando tiempos
+
+ASINCRONOS --> Node guarda las funciones asincronas en Node Apis(la pila de espera), si pasan los segundos 
+de alguna, estas funciones pasan a cola de callbacks(procesos listos para ser ejecutados)
+
+INSTALACION PAQUETES --> -g se tiene que hacer como adm(sudo). Al ser global puedo ejecutar el comando
+en cualquier lugar que quiera. Para probar la instalacion nodemon -v
+
+LET VS VAR. --> 2 let declarados fuera y dentro de un if son distintos, tambien fuera y dentro de un for
+pasa lo mismo, si pones un console.log siempre muestra lo que no este en el if o en el for xq es como que
+ estan en otro lugar de memoria. En cambio con var siempre obtengo la ultima declarada.
+
+
+
