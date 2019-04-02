@@ -21,5 +21,9 @@
 // function saludar(nombre) {
 //     return `Hola ${nombre}`;
 // }
-let saludar = (nombre) => `Hola ${nombre}`
-console.log(saludar('Nico'));
+// let saludar = nombre => `Hola ${nombre}`
+// console.log(saludar('Nico'));
+
+//cuarta forma
+// let saludar = (nombre) => `Hola ${nombre}`
+// console.log(saludar('Nico'));
