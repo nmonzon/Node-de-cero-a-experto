@@ -27,3 +27,25 @@
 //cuarta forma
 // let saludar = (nombre) => `Hola ${nombre}`
 // console.log(saludar('Nico'));
+
+let ejemplo = (id, callback) => {
+
+    let person = {
+        name: "Juan",
+        id: id
+    }
+
+    if (person.id !== 20){
+        callback(`Error al encontrar el id ${person.id} en la base de datos`);
+    }else{
+        callback(null, `El usuario con id ${person.id} es ${person.name}`);
+    }
+}
+
+ejemplo(22, (err, person) => {
+    if(err){
+        console.log(err);
+    }else{
+        console.log(person);
+    }
+});

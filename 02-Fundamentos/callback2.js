@@ -17,7 +17,47 @@ let salarios = [{
     salario: 2000
 }]
 
-let getEmpleado = (id, callback) => {
+let getEmpleado = (id) =>{
+
+    return new Promise((resolve, reject)=>{
+
+        let empleado = empleados.find(empleado =>{
+            return empleado.id === id;
+        });
+    
+        if(!empleado){
+            reject(`Empleado con id ${id} no encontrado.`);
+        }else{
+            resolve(empleado)
+        }
+    });
+}
+
+let getSalario = (empleado) => {
+
+    return new Promise((resolve, reject) =>{
+        let salario = salarios.find((salario) => {
+            return salario.id === empleado.id;
+        });
+    
+        if (!salario) {
+            reject(`El empleado ${empleado.nombre} no tiene salario asociado`);
+        } else {
+            resolve(salario);
+        }
+    });
+
+    
+};
+
+getEmpleado(3).then(empleado =>{
+    return getSalario(empleado);
+}).then( resp => {
+    console.log(resp);
+}).catch( err =>{
+    console.log(err);
+})
+/*let getEmpleado = (id, callback) => {
 
     let empleadoFound = empleados.find((empleado) => {
         return empleado.id === id;
@@ -29,21 +69,6 @@ let getEmpleado = (id, callback) => {
         callback(null, empleadoFound);
     }
 };
-
-
-let getSalario = (empleado, callback) => {
-
-    let salario = salarios.find((salario) => {
-        return salario.id === empleado.id;
-    });
-
-    if (!salario) {
-        callback(`El empleado ${empleado.nombre} no tiene salario asociado`);
-    } else {
-        callback(null, salario.salario, empleado.nombre);
-    }
-};
-
 
 getEmpleado(5, (err, empleado) => {
     if (err) {
@@ -57,4 +82,4 @@ getEmpleado(5, (err, empleado) => {
             }
         });
     }
-});
+});*/
